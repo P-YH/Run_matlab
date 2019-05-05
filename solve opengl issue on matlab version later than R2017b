@@ -1,1 +1,2 @@
 matlab -softwareopenglmesa
+% write the command above in command prompt window, works for windows and linux only
