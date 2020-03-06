@@ -1,0 +1,13 @@
+% channel_number: number of channels
+% fs: sampling rate
+% int16 is the specified bit format
+% target_channel: range from 1 to channel_number
+% filename: the name of the file
+
+
+fid=fopen(filename,'r');
+f=fread(fid,channel_number*fs*time_in_second,'int16');
+raw_sig =f(target_channel:channel_number:length(f)); % might need to debug for length(f)-channel_number+target_channel
+plot(raw_sig)
+figure
+plot(raw_sig)
